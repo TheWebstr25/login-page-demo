@@ -57,7 +57,7 @@ img{
 
 /* Shuffle to the right */
 .shuffle-right {
-  animation: shuffleRight 0.8s ease-in-out forwards;
+  animation: shuffleRight 1.8s ease-in-out forwards;
 }
 
 @keyframes shuffleRight {
@@ -80,7 +80,7 @@ img{
 
 /* Shuffle to the left */
 .shuffle-left {
-  animation: shuffleLeft 0.8s ease-in-out forwards;
+  animation: shuffleLeft 1.8s ease-in-out forwards;
 }
 
 @keyframes shuffleLeft {
