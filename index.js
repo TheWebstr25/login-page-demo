@@ -46,3 +46,42 @@ document.getElementById("alte-btn-2").addEventListener("click", function (b){
   borderRadius.borderTopRightRadius = "50px"
   borderRadius.borderBottomRightRadius = "50px"
 });
+
+const cover = document.getElementById("cover");
+const signIn = document.getElementById("sign-in");
+const signUp = document.getElementById("sign-up");
+const grid = document.getElementById("grid");
+
+document.getElementById("alte-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  cover.classList.remove("shuffle-left");
+  cover.classList.add("shuffle-right");
+
+  // Change form display
+  signIn.style.display = "none";
+  signUp.style.display = "flex";
+
+  // Swap order halfway through
+  setTimeout(() => {
+    grid.classList.remove("grid");
+    grid.classList.add("alte-grid");
+  }, 400); // half of animation time
+});
+
+document.getElementById("alte-btn-2").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  cover.classList.remove("shuffle-right");
+  cover.classList.add("shuffle-left");
+
+  // Change form display
+  signUp.style.display = "none";
+  signIn.style.display = "flex";
+
+  // Swap order halfway through
+  setTimeout(() => {
+    grid.classList.remove("alte-grid");
+    grid.classList.add("grid");
+  }, 400);
+});
